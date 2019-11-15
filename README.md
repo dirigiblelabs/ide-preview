@@ -9,7 +9,7 @@ Preview Plugin for the [Eclipse Dirigible](https://github.com/eclipse/dirigible)
 
 Build the [Eclipse Dirigible](https://github.com/eclipse/dirigible), deploy on e.g. Tomcat Web Container and go to location:
 
-> http://localhost:8080/services/v3/web/ide-preview/preview.html
+> http://localhost:8080/services/v4/web/ide-preview/preview.html
 
 ## License
 
