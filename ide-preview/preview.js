@@ -44,7 +44,10 @@ angular.module('preview', [])
 				url += '/nashorn';
 				break;
 			case 'v8':
-				url += 'v8';
+				url += '/v8';
+				break;
+			case 'graalvm':
+				url += '/graalvm';
 				break;
 			case 'js':
 				url += '/js';
