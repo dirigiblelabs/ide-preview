@@ -49,8 +49,11 @@ angular.module('preview', [])
 		var iframe = document.getElementById('preview-iframe');
 		var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 		if (iframeDocument) {
-			iframeDocument.getElementsByTagName('pre')[0].style.color = getComputedStyle(element).color;
-			$messageHub.message('status.message', 'Preview ' + this.previewUrl);
+			if (iframeDocument.getElementsByTagName('pre')[0]
+					&& iframeDocument.getElementsByTagName('pre').length === 1) {
+				iframeDocument.getElementsByTagName('pre')[0].style.color = getComputedStyle(element).color;
+				$messageHub.message('status.message', 'Preview ' + this.previewUrl);
+			}
 		}
     }
     
