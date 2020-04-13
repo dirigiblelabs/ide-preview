@@ -49,6 +49,11 @@ angular.module('preview', [])
 		var iframe = document.getElementById('preview-iframe');
 		var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 		if (iframeDocument) {
+			if (iframeDocument.getElementsByTagName("body").length === 1 
+			        && iframeDocument.getElementsByTagName("body")[0].outerText) {
+				iframeDocument.getElementsByTagName("body")[0].style.color = getComputedStyle(element).color;
+				iframeDocument.getElementsByTagName("body")[0].style['font-family'] = getComputedStyle(element)['font-family'];
+			}
 			if (iframeDocument.getElementsByTagName('pre')[0]
 					&& iframeDocument.getElementsByTagName('pre').length === 1) {
 				iframeDocument.getElementsByTagName('pre')[0].style.color = getComputedStyle(element).color;
