@@ -103,6 +103,7 @@ angular.module('preview', [])
 			case 'access':
 			case 'roles':
 			case 'sh':
+			case 'form':
 				return;
 			default:
 				url += '/web';
