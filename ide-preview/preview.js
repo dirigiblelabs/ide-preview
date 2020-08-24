@@ -114,7 +114,7 @@ angular.module('preview', [])
 	}.bind(this));
 	
 	$messageHub.on('workspace.file.published', function(msg) {
-		this.refresh();
+		setTimeout(function(){ this.refresh(); }, 1000);
 		$scope.$apply();
 	}.bind(this));
 
