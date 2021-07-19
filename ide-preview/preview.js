@@ -109,6 +109,8 @@ angular.module('preview', [])
 					case 'roles':
 					case 'sh':
 					case 'csv':
+					case 'csvim':
+					case 'hdbti':
 					case 'form':
 						return;
 					default:
