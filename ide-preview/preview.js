@@ -111,7 +111,7 @@ angular.module('preview', [])
                     case 'calculationview':
                     case 'websocket':
                     case 'hdbtable':
-                    case 'hdbstructur':
+                    case 'hdbstructurе':
                     case 'hdbview':
                     case 'hdbtablefunction':
                     case 'hdbprocedure':
