@@ -11,13 +11,11 @@
  */
 const viewData = {
 	id: "preview",
-	name: "Preview",
-	factory: "frame",
-	region: "center-bottom",
 	label: "Preview",
+	factory: "frame",
+	region: "bottom",
 	link: "../ide-preview/preview.html"
 };
-
 if (typeof exports !== 'undefined') {
 	exports.getView = function () {
 		return viewData;
