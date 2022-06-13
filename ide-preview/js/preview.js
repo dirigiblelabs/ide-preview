@@ -195,14 +195,14 @@ previewView.controller('PreviewController', ['$scope', 'messageHub', function ($
         return url;
     }
 
-    messageHub.onFileSelected(function (fileDescriptor) {
+    messageHub.onFileSelected((fileDescriptor) => {
         if (this.urlLocked)
             return;
 
         let url = this.makeUrlFromPath(fileDescriptor.path);
         this.gotoUrl(url, false);
         $scope.$apply();
-    }.bind(this));
+    });
 
     messageHub.onPublish((fileDescriptor) => {
         if (this.urlLocked)
