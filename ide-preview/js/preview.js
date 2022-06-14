@@ -200,8 +200,10 @@ previewView.controller('PreviewController', ['$scope', 'messageHub', function ($
             return;
 
         let url = this.makeUrlFromPath(fileDescriptor.path);
-        this.gotoUrl(url, false);
-        $scope.$apply();
+        if (url) {
+            this.gotoUrl(url, false);
+            $scope.$apply();
+        }
     });
 
     messageHub.onPublish((fileDescriptor) => {
@@ -210,8 +212,10 @@ previewView.controller('PreviewController', ['$scope', 'messageHub', function ($
 
         if (fileDescriptor.path) {
             let url = this.makeUrlFromPath(fileDescriptor.path);
-            this.gotoUrl(url);
-            $scope.$apply();
+            if (url) {
+                this.gotoUrl(url);
+                $scope.$apply();
+            }
         } else {
             this.reload();
             $scope.$apply();
@@ -224,8 +228,10 @@ previewView.controller('PreviewController', ['$scope', 'messageHub', function ($
 
         if (fileDescriptor.path) {
             let url = this.makeUrlFromPath(fileDescriptor.path);
-            this.gotoUrl(url);
-            $scope.$apply();
+            if (url) {
+                this.gotoUrl(url);
+                $scope.$apply();
+            }
         } else {
             this.reload();
             $scope.$apply();
